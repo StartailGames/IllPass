@@ -80,9 +80,11 @@ class IllPassGame:
         # Burn cards
         if not silent:
             print("Burns: ")
-            for i in range(self.burn_num):
-                card = self.cards.pop()
+        for i in range(self.burn_num):
+            card = self.cards.pop()
+            if not silent:
                 print(str(card) + ' ', end='')
+        if not silent:
             print()
 
         # First card
